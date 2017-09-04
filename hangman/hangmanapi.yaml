@@ -50,6 +50,14 @@ paths:
         
       operationId: startGame
       
+      requestBody:
+        description: "Player object"
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Player'
+
       tags:
         - game
       
@@ -131,6 +139,10 @@ paths:
       responses:
         '200':
           description: "Guess was made successfully."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Game'
         '400':
           description: "Guess was not made."
           content:
@@ -202,8 +214,17 @@ paths:
       description: |
         This API call allows to create a new player. If the player name is already taken 400 error is thrown.
       
+      requestBody:
+        description: "Player object"
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Player'
+
       tags:
         - player
+
       responses:
         '200':
           description: "Player created successfully."
