@@ -248,6 +248,10 @@ paths:
       responses:
         '200':
           description: "Player created successfully."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Player'
         '400':
           description: "Player already exists"
         default:
@@ -278,6 +282,10 @@ paths:
       responses:
         '200':
           description: 'Player info fetched.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Player'
         '404':
           description: 'Player was not found'
         default:
