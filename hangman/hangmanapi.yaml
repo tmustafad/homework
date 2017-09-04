@@ -16,7 +16,13 @@ servers:
   - url: http://localhost/hangman/v1
 
 paths:
+  #
+  # Main entry to the games
+  #
   /game:
+    #
+    # Lists games
+    #
     get:
       summary: "Fetches all games"
       
@@ -42,6 +48,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
                 
+    #
+    # Creates a game
+    #
     post:
       summary: "Starts a new game."
       
@@ -64,6 +73,10 @@ paths:
       responses:
         '200':
           description: "Game was started successfully."
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Game'
         default:
           description: "Unexpected error."
           content:
@@ -71,6 +84,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
   
+  #
+  # Fetches single game
+  #
   /game/{gameId}:
     get:
       summary: "Fetches game information"
@@ -107,7 +123,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
                 
-  /game/{gameId}/guess:
+    #
+    # Makes a guess of the letter
+    #
     put:
       summary: "Guess a letter in the game."
       
@@ -150,8 +168,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/Error'
   
-  /game/{gameId}/giveup:
-    post:
+    #
+    # Gives up the game.
+    #
+    delete:
       summary: "Gives up."
       
       description: |
