@@ -300,14 +300,21 @@ components:
   schemas:
     Player:
       required:
+        - id
         - name
         - age
       properties:
+        id:
+          type: integer
+          format: int64
+          description: "Player ID"
         name:
           type: string
+          description: "Player name"
         age:
           type: integer
           format: int32
+          description: "Player age"
     
     Players:
       type: array
@@ -320,9 +327,11 @@ components:
       properties:
         letter:
           type: string
+          description: "Letter being guessed"
     
     Game:
       required:
+        - id
         - player
         - guesses
         - guessesLeft
@@ -330,6 +339,10 @@ components:
         - incorrectLetters
         - gameStatus
       properties:
+        id:
+          type: integer
+          format: int64
+          description: "Game ID"
         player:
           type: string
         guesses:
@@ -349,6 +362,8 @@ components:
         gameStatus:
           type: string
           enum: [ongoing, won, lost]
+          description: |
+            Contains the state of the game.
           
     Games:
       type: array
@@ -363,5 +378,7 @@ components:
         code:
           type: integer
           format: int32
+          description: "Error code"
         message:
           type: string
+          description: "Error description in human readable format"
