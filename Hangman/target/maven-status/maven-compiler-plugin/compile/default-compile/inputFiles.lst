@@ -1,0 +1,13 @@
+D:\HangmanWorkspace\Hangman\src\main\java\com\hangman\dao\GameDao.java
+D:\HangmanWorkspace\Hangman\src\main\java\com\hangman\dao\AbstractDao.java
+D:\HangmanWorkspace\Hangman\src\main\java\hangman\homework\base\Base.java
+D:\HangmanWorkspace\Hangman\src\main\java\com\hangman\dao\PlayerDao.java
+D:\HangmanWorkspace\Hangman\src\main\java\com\hangman\controller\BaseController.java
+D:\HangmanWorkspace\Hangman\src\main\java\com\hangman\dao\PlayerDaoImpl.java
+D:\HangmanWorkspace\Hangman\src\main\java\com\hangman\entity\Player.java
+D:\HangmanWorkspace\Hangman\src\main\java\com\hangman\dao\GameDaoImpl.java
+D:\HangmanWorkspace\Hangman\src\main\java\com\hangman\util\GameStatus.java
+D:\HangmanWorkspace\Hangman\src\main\java\com\hangman\db\HibernateUtil.java
+D:\HangmanWorkspace\Hangman\src\main\java\com\hangman\db\TestHibernate.java
+D:\HangmanWorkspace\Hangman\src\main\java\com\hangman\util\Util.java
+D:\HangmanWorkspace\Hangman\src\main\java\com\hangman\entity\Game.java
